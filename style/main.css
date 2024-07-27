@@ -1,0 +1,115 @@
+/* Start Global Rules */
+:root {
+    --orange:hsl(31, 77%, 52%);
+    --blue:hsl(184, 100%, 22%);
+    --green:hsl(179, 100%, 13%);
+    --p-color:hsla(0, 0%, 100%, 0.75);
+    --headings:hsl(0, 0%, 95%);
+    --font-s:15px;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* 
+- Mobile: 375px
+- Desktop: 1440px
+*/
+@media (max-width:375px) {
+    .container {
+        width: 340px;
+        grid-template-columns: 1fr;
+    }
+    .card {
+        padding: 40px;
+    }
+}
+@media (min-width:376px) {
+    .container {
+        width: 370px;
+        grid-template-columns: 1fr;
+    }
+    .card {
+        padding: 40px;
+    }
+}
+@media (min-width:769px) {
+    .container {
+        width: 750px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .card {
+        padding: 40px;
+    }
+}
+@media (min-width:992px) {
+    .container {
+        width: 900px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .card {
+        padding: 50px;
+    }
+}
+/* End Global Rules */
+/* Start Container */
+.container {
+    border-radius: 10px;
+    overflow: hidden;
+    display: grid;
+    margin: 50px auto;
+}
+.sedans {
+    background: var(--orange);
+}
+.suvs {
+    background-color: var(--blue);
+}
+.luxury {
+    background-color: var(--green);
+}
+svg {
+    margin-bottom: 20px;
+}
+h2 {
+    font-family: "Big Shoulders Display", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--headings);
+    margin-bottom: 20px;
+}
+p {
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    color: var(--p-color);
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+button {
+    background-color: var(--headings);
+    font-size: 16px;
+    height: 45px;
+    width: 150px;
+    outline: none;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    font-family: "Lexend Deca", sans-serif;
+    cursor: pointer;
+    transition: .3s;
+}
+.sedans button {
+    color: var(--orange);
+}
+.suvs button {
+    color: var(--blue);
+}
+.luxury button {
+    color: var(--green);
+}
+button:hover {
+    border: 2px solid var(--headings);
+    color: var(--headings);
+    background-color: transparent;
+}
+/* End Containers */
